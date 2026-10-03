@@ -26,6 +26,11 @@
   .card .logo{display:block;height:62px;width:auto;align-self:flex-start}
   /* Brand photography: structure fills the frame, no skyline. Each card sets its crop. */
   .card .rcl-hero__media{background-position:var(--crop,center);background-size:var(--zoom,cover)}
+  /* A motif instead of a photograph, for work that is not about structure (brand: motifs are
+     background texture, one per composition). No protection fade or guides: those belong to
+     photography. */
+  .card .rcl-hero__media.is-motif{background-repeat:no-repeat}
+  .card .rcl-hero__media.is-motif::before,.card .rcl-hero__media.is-motif .rcl-hero__guides{display:none}
 </style>
 </head>
 <body>
@@ -47,8 +52,11 @@
     document.getElementById('eyebrow').textContent = c.eyebrow;
     document.getElementById('title').textContent = c.title;
     document.getElementById('description').textContent = c.description;
-    document.getElementById('media').style.backgroundImage =
-      `url('../../rcl-brand/assets/Photography/${c.photo}')`;
+    const media = document.getElementById('media');
+    media.style.backgroundImage = c.motif
+      ? `url('../../rcl-brand/assets/Motifs/${c.motif}')`
+      : `url('../../rcl-brand/assets/Photography/${c.photo}')`;
+    media.classList.toggle('is-motif', !!c.motif);
     if (c.crop) document.getElementById('media').style.setProperty('--crop', c.crop);
     if (c.zoom) document.getElementById('media').style.setProperty('--zoom', c.zoom);
     document.title = c.repo;

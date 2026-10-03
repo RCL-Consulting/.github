@@ -28,11 +28,11 @@
   },
   {
     "repo": "Wombat",
-    "eyebrow": "Open source",
+    "eyebrow": "Medical education",
     "title": "Wombat",
     "description": "Work-based assessment of medical specialists through entrustable professional activities.",
-    "photo": "space-frame-canopy.jpg",
-    "crop": "45% 0%",
-    "zoom": "auto 170%"
+    "motif": "matrix-field.svg",
+    "crop": "0 50%",
+    "zoom": "auto 100%"
   }
 ]
