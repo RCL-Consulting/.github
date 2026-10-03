@@ -15,12 +15,14 @@
   @font-face{font-family:'Cormorant Garamond';src:url('../../rcl-brand/fonts/CormorantGaramond-Variable.woff2') format('woff2');font-weight:400 700}
   @font-face{font-family:'Jost';src:url('../../rcl-brand/fonts/Jost-Variable.woff2') format('woff2');font-weight:100 900}
   html,body{margin:0;background:var(--surface)}
-  .cover{width:4200px;height:700px;min-height:0;grid-template-columns:minmax(0,3fr) minmax(0,2fr)}
-  /* Text starts right of the logo's footprint (x < ~650) and sits high, clear of it. */
-  .cover .rcl-hero__copy{padding:0 0 120px 760px;justify-content:center;gap:0}
-  .cover .rcl-hero__title{font-size:132px;line-height:1.02;white-space:nowrap}
+  .cover{width:4200px;height:700px;min-height:0;grid-template-columns:minmax(0,13fr) minmax(0,7fr)}
+  /* On the Page, LinkedIn draws the logo over the cover's lower left, from about x 130 to 970
+     and from y 260 down (seen 2026-10-03; the first version's title ran under it). The text
+     starts right of it and sits high. */
+  .cover .rcl-hero__copy{padding:0 0 300px 1150px;justify-content:center;gap:0}
+  .cover .rcl-hero__title{font-size:120px;line-height:1.02;white-space:nowrap}
   .cover .rcl-hero__title::after{width:200px;height:7px;margin-top:56px}
-  .cover .rcl-hero__media{background-image:url('../../rcl-brand/assets/Photography/steel-underside-blue.jpg');background-position:50% 12%;background-size:cover}
+  .cover .rcl-hero__media{background-image:url('../../rcl-brand/assets/Photography/steel-underside-blue.jpg');background-position:50% 8%;background-size:auto 190%}
   /* The hero's guide pitch (120px) scaled with the type. */
   .cover .rcl-hero__guides{background-image:repeating-linear-gradient(90deg,transparent 0 446px,var(--guide) 446px 450px)}
 </style>
