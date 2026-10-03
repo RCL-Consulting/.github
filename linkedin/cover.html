@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LinkedIn cover</title>
+<!-- The LinkedIn company page cover: 4200 x 700, shown at about 1128 x 191 on desktop
+     (scale ~0.27), so type is set large. The page logo overlaps the lower left; LinkedIn
+     asks for the lower right to stay clear of detail. Everything visual comes from
+     rcl-brand, checked out beside this repo. -->
+<link rel="stylesheet" href="../../rcl-brand/source/tokens/colors.css">
+<link rel="stylesheet" href="../../rcl-brand/source/tokens/typography.css">
+<link rel="stylesheet" href="../../rcl-brand/source/tokens/spacing.css">
+<link rel="stylesheet" href="../../rcl-brand/components/bundle.css">
+<style>
+  @font-face{font-family:'Cormorant Garamond';src:url('../../rcl-brand/fonts/CormorantGaramond-Variable.woff2') format('woff2');font-weight:400 700}
+  @font-face{font-family:'Jost';src:url('../../rcl-brand/fonts/Jost-Variable.woff2') format('woff2');font-weight:100 900}
+  html,body{margin:0;background:var(--surface)}
+  .cover{width:4200px;height:700px;min-height:0;grid-template-columns:minmax(0,3fr) minmax(0,2fr)}
+  /* Text starts right of the logo's footprint (x < ~650) and sits high, clear of it. */
+  .cover .rcl-hero__copy{padding:0 0 120px 760px;justify-content:center;gap:0}
+  .cover .rcl-hero__title{font-size:132px;line-height:1.02;white-space:nowrap}
+  .cover .rcl-hero__title::after{width:200px;height:7px;margin-top:56px}
+  .cover .rcl-hero__media{background-image:url('../../rcl-brand/assets/Photography/steel-underside-blue.jpg');background-position:50% 12%;background-size:cover}
+  /* The hero's guide pitch (120px) scaled with the type. */
+  .cover .rcl-hero__guides{background-image:repeating-linear-gradient(90deg,transparent 0 446px,var(--guide) 446px 450px)}
+</style>
+</head>
+<body>
+<div class="rcl-hero cover" id="cover">
+  <div class="rcl-hero__copy">
+    <h1 class="rcl-hero__title">Structural engineering software</h1>
+  </div>
+  <div class="rcl-hero__media"><div class="rcl-hero__guides"></div></div>
+</div>
+<script>document.fonts.ready.then(() => document.body.dataset.ready = '1');</script>
+</body>
+</html>

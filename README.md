@@ -11,6 +11,11 @@ hashes. Change the brand in Claude Design, sync rcl-brand, then copy the files a
 Brand rules for anything written here: "we", sentence case, plain and factual, no emoji, no badges.
 Name only public repositories.
 
+## LinkedIn cover
+
+`linkedin/cover.html` renders the company page cover (4200 × 700, shown at about 1128 × 191; the page
+logo overlaps the lower left) to `linkedin/out/rcl-linkedin-cover.png`, the same way as the cards below.
+
 ## Social previews
 
 `social-preview/` renders the 1280 × 640 cards GitHub shows when a public repository is shared.
