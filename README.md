@@ -14,7 +14,7 @@ Name only public repositories.
 ## LinkedIn cover
 
 `linkedin/cover.html` renders the company page cover (4200 × 700, shown at about 1128 × 191; the page
-logo overlaps the lower left) to `linkedin/out/rcl-linkedin-cover.png`, the same way as the cards below.
+logo overlaps the lower left) to `linkedin/out/rcl-linkedin-cover.png`, the same way as the cards below. Upload the JPG made from it (`rcl-linkedin-cover.jpg`, 4200 × 700, quality 90): on 2026-10-03 the PNG upload failed and the JPG worked after a page reload.
 
 ## Social previews
 
