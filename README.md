@@ -16,6 +16,10 @@ Name only public repositories.
 `linkedin/cover.html` renders the company page cover (4200 × 700, shown at about 1128 × 191; the page
 logo overlaps the lower left) to `linkedin/out/rcl-linkedin-cover.png`, the same way as the cards below. Upload the JPG made from it (`rcl-linkedin-cover.jpg`, 4200 × 700, quality 90): on 2026-10-03 the PNG upload failed and the JPG worked after a page reload.
 
+## Personal LinkedIn banner
+
+`linkedin/personal-banner.html` is the personal banner from rcl-brand's Social template (1584 × 396, ink), copied as designed with its placeholder headline filled in. Upload `linkedin/out/renier-linkedin-banner.jpg`.
+
 ## Social previews
 
 `social-preview/` renders the 1280 × 640 cards GitHub shows when a public repository is shared.
