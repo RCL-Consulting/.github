@@ -1,0 +1,38 @@
+[
+  {
+    "repo": "OpenDLO",
+    "eyebrow": "Open source",
+    "title": "OpenDLO",
+    "description": "Discontinuity layout optimisation of plates: the ultimate load a plate can carry.",
+    "photo": "steel-underside-teal-deck.jpg",
+    "crop": "60% 0%",
+    "zoom": "auto 165%"
+  },
+  {
+    "repo": "QuadMind",
+    "eyebrow": "Open source",
+    "title": "QuadMind",
+    "description": "Quad meshing for finite elements: Q-Morph in C++20, with machine-learning experiments.",
+    "photo": "gridshell-dome.jpg",
+    "crop": "50% 0%",
+    "zoom": "auto 165%"
+  },
+  {
+    "repo": "QMVision",
+    "eyebrow": "Open source",
+    "title": "QMVision",
+    "description": "An OpenGL viewer for inspecting and debugging QuadMind meshes.",
+    "photo": "space-frame-atrium.jpg",
+    "crop": "40% 0%",
+    "zoom": "auto 210%"
+  },
+  {
+    "repo": "Wombat",
+    "eyebrow": "Open source",
+    "title": "Wombat",
+    "description": "Work-based assessment of medical specialists through entrustable professional activities.",
+    "photo": "space-frame-canopy.jpg",
+    "crop": "45% 0%",
+    "zoom": "auto 170%"
+  }
+]

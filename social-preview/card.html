@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Social preview</title>
+<!-- Everything visual comes from rcl-brand, checked out beside this repo: tokens, the
+     component stylesheet (rcl-hero, rcl-eyebrow), fonts, logo and photographs. This page
+     only scales the website hero up to GitHub's 1280 x 640 card. -->
+<link rel="stylesheet" href="../../rcl-brand/source/tokens/colors.css">
+<link rel="stylesheet" href="../../rcl-brand/source/tokens/typography.css">
+<link rel="stylesheet" href="../../rcl-brand/source/tokens/spacing.css">
+<link rel="stylesheet" href="../../rcl-brand/components/bundle.css">
+<style>
+  @font-face{font-family:'Cormorant Garamond';src:url('../../rcl-brand/fonts/CormorantGaramond-Variable.woff2') format('woff2');font-weight:400 700}
+  @font-face{font-family:'Jost';src:url('../../rcl-brand/fonts/Jost-Variable.woff2') format('woff2');font-weight:100 900}
+  html,body{margin:0;background:var(--surface)}
+  /* The card: the hero at 1280 x 640. Type is scaled ~2x because GitHub and LinkedIn show it
+     at roughly half size. */
+  .card{width:1280px;height:640px;min-height:0;grid-template-columns:minmax(0,13fr) minmax(0,7fr)}
+  .card .rcl-hero__copy{padding:64px 48px 56px 72px;justify-content:space-between;gap:0}
+  .card .rcl-eyebrow{font-size:22px;line-height:28px}
+  .card .rcl-eyebrow::after{width:48px;margin-top:14px}
+  .card .rcl-hero__title{font-size:104px;line-height:1;margin-top:28px}
+  .card .rcl-hero__title::after{width:72px;margin-top:32px}
+  .card .lead{font-family:var(--font-sans);font-size:30px;line-height:42px;color:var(--text-muted);margin:32px 0 0;max-width:620px;text-wrap:pretty}
+  .card .logo{display:block;height:62px;width:auto;align-self:flex-start}
+  /* Brand photography: structure fills the frame, no skyline. Each card sets its crop. */
+  .card .rcl-hero__media{background-position:var(--crop,center);background-size:var(--zoom,cover)}
+</style>
+</head>
+<body>
+<div class="rcl-hero card" id="card">
+  <div class="rcl-hero__copy">
+    <img class="logo" src="../../rcl-brand/assets/Logos/rcl-logo.svg" alt="RCL Consulting">
+    <div>
+      <p class="rcl-eyebrow" id="eyebrow"></p>
+      <h1 class="rcl-hero__title" id="title"></h1>
+      <p class="lead" id="description"></p>
+    </div>
+  </div>
+  <div class="rcl-hero__media" id="media"><div class="rcl-hero__guides"></div></div>
+</div>
+<script>
+  const repo = new URLSearchParams(location.search).get('repo');
+  fetch('cards.json', { cache: 'no-store' }).then(r => r.json()).then(cards => {
+    const c = cards.find(x => x.repo === repo) || cards[0];
+    document.getElementById('eyebrow').textContent = c.eyebrow;
+    document.getElementById('title').textContent = c.title;
+    document.getElementById('description').textContent = c.description;
+    document.getElementById('media').style.backgroundImage =
+      `url('../../rcl-brand/assets/Photography/${c.photo}')`;
+    if (c.crop) document.getElementById('media').style.setProperty('--crop', c.crop);
+    if (c.zoom) document.getElementById('media').style.setProperty('--zoom', c.zoom);
+    document.title = c.repo;
+    document.fonts.ready.then(() => document.body.dataset.ready = '1');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "note": "Logos copied from rcl-brand; the cards in social-preview/out/ were rendered from the same commit. Do not edit the logos; copy them again.",
+  "repo": "https://github.com/RCL-Consulting/rcl-brand.git",
+  "commit": "80a9a18e527cb687e0c5ca62e2da9bf7c45b3044",
+  "pinned": "2026-10-03",
+  "files": {
+    "profile/rcl-logo.svg": {
+      "from": "assets/Logos/rcl-logo.svg",
+      "sha256": "852897a3bcb7e1e412049f8789b2738af5b71e2c6c9733856f4bbf77e23f86e4"
+    },
+    "profile/rcl-logo-reversed.svg": {
+      "from": "assets/Logos/rcl-logo-reversed.svg",
+      "sha256": "2f08dbedd9f86e4dd0cc7e84f3960a7cfa03d5d3e671f4ffd47af5adead69b1f"
+    }
+  }
+}
